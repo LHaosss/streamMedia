@@ -1,14 +1,14 @@
 package dbops
 
-
 import (
 	"database/sql"
-	_"github.com/go_sql_driver/mysql"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 var (
 	dbConn *sql.DB
-	err error
+	err    error
 )
 
 func init() {

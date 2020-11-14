@@ -1,11 +1,13 @@
 package main
 
-import(
+import (
 	"net/http"
+
 	"github.com/julienschmidt/httprouter"
 )
 
-func RegisterHandlers() *httprouter.Router{
+//RegisterHandlers ...
+func RegisterHandlers() *httprouter.Router {
 	router := httprouter.New()
 	router.POST("/user", CreateUser)
 	router.POST("/user/:user_name", Login)
@@ -13,8 +15,7 @@ func RegisterHandlers() *httprouter.Router{
 	return router
 }
 
-func main(){
-	r:=RegisterHandlers()
+func main() {
+	r := RegisterHandlers()
 	http.ListenAndServe(":8000", r)
 }
-
