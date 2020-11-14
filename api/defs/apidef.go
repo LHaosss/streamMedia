@@ -1,11 +1,19 @@
 package defs
 
+//UserCreadential ...
 type UserCreadential struct {
 	//打tip
 	Username string `json:"user_name"`
 	Pwd      string `json:"pwd"`
 }
 
+//SignedUp ...
+type SignedUp struct {
+	Success   bool   `json:"success"`
+	SessionId string `json:"session_id"`
+}
+
+//VideoInfo ...
 type VideoInfo struct {
 	Id           string
 	AuthorId     int
@@ -13,6 +21,7 @@ type VideoInfo struct {
 	DisplayCtime string
 }
 
+//Comments ...
 type Comments struct {
 	Id      string
 	VideoId string
@@ -20,8 +29,8 @@ type Comments struct {
 	Content string
 }
 
-
+//SimpleSession ...
 type SimpleSession struct {
 	Username string
-	TTL int64
+	TTL      int64
 }
