@@ -7,7 +7,7 @@ type UserCreadential struct {
 	Pwd      string `json:"pwd"`
 }
 
-//SignedUp ...
+//SignedUp ...返回的状态码
 type SignedUp struct {
 	Success   bool   `json:"success"`
 	SessionId string `json:"session_id"`

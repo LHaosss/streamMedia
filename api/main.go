@@ -13,7 +13,7 @@ type middleWareHandler struct {
 //NewMiddleWareHandler ...
 func NewMiddleWareHandler(r *httprouter.Router) http.Handler {
 	m := middleWareHandler{}
-	m.r = r
+	m.r = r//？？？
 	return m
 }
 
@@ -31,6 +31,7 @@ func RegisterHandlers() *httprouter.Router {
 	return router
 }
 
+//？？？程序处理顺序
 func main() {
 	r := RegisterHandlers()
 	mh := NewMiddleWareHandler(r)
